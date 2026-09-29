@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+.env
+legacy/target/
+legacy-next/target/
+.ltw-parked/
+evals/results/observations.json

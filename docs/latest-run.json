@@ -1,0 +1,130 @@
+{
+  "classes": [
+    "DoubleMetaphone",
+    "Metaphone",
+    "RefinedSoundex",
+    "Soundex"
+  ],
+  "proposed": 1020,
+  "emitted": 1020,
+  "held": 0,
+  "held_reasons": {},
+  "by_class": {
+    "DoubleMetaphone": {
+      "methods": 8,
+      "emitted": 304,
+      "held": 0
+    },
+    "Metaphone": {
+      "methods": 6,
+      "emitted": 236,
+      "held": 0
+    },
+    "RefinedSoundex": {
+      "methods": 4,
+      "emitted": 217,
+      "held": 0
+    },
+    "Soundex": {
+      "methods": 6,
+      "emitted": 263,
+      "held": 0
+    }
+  },
+  "llm": false,
+  "generated": {
+    "tests_run": 1020,
+    "failures": 0,
+    "errors": 0,
+    "coverage": {
+      "lines_covered": 607,
+      "lines_total": 721,
+      "line_rate": 0.8419,
+      "branches_covered": 471,
+      "branches_total": 676,
+      "branch_rate": 0.6967,
+      "by_class": {
+        "DoubleMetaphone": {
+          "covered": 316,
+          "total": 415
+        },
+        "DoubleMetaphone$DoubleMetaphoneResult": {
+          "covered": 32,
+          "total": 37
+        },
+        "Metaphone": {
+          "covered": 161,
+          "total": 169
+        },
+        "RefinedSoundex": {
+          "covered": 30,
+          "total": 31
+        },
+        "Soundex": {
+          "covered": 48,
+          "total": 48
+        },
+        "SoundexUtils": {
+          "covered": 20,
+          "total": 21
+        }
+      }
+    },
+    "mutation": null
+  },
+  "empty": {
+    "tests_run": 0,
+    "failures": 0,
+    "errors": 0,
+    "coverage": null,
+    "mutation": null,
+    "suite": "empty"
+  },
+  "reference": {
+    "tests_run": 74,
+    "failures": 0,
+    "errors": 0,
+    "coverage": {
+      "lines_covered": 665,
+      "lines_total": 721,
+      "line_rate": 0.9223,
+      "branches_covered": 546,
+      "branches_total": 676,
+      "branch_rate": 0.8077,
+      "by_class": {
+        "DoubleMetaphone": {
+          "covered": 362,
+          "total": 415
+        },
+        "DoubleMetaphone$DoubleMetaphoneResult": {
+          "covered": 37,
+          "total": 37
+        },
+        "Metaphone": {
+          "covered": 167,
+          "total": 169
+        },
+        "RefinedSoundex": {
+          "covered": 31,
+          "total": 31
+        },
+        "Soundex": {
+          "covered": 48,
+          "total": 48
+        },
+        "SoundexUtils": {
+          "covered": 20,
+          "total": 21
+        }
+      }
+    },
+    "mutation": null
+  },
+  "next": {
+    "tests_run": 0,
+    "failures": 0,
+    "errors": 20,
+    "coverage": null,
+    "mutation": null
+  }
+}

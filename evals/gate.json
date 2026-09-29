@@ -1,0 +1,8 @@
+{
+  "emitted": 900,
+  "held_max": 20,
+  "generated_line_rate": 0.8,
+  "generated_mutation_score": null,
+  "coverage_slack": 0.12,
+  "min_drift_failures": 1
+}

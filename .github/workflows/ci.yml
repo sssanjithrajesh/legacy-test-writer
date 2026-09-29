@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.9
+      - run: uv sync --extra dev
+      - name: lint
+        run: uv run ruff check . && uv run ruff format --check .
+      - name: python tests
+        run: uv run pytest -q
+      - name: generate, measure generated + reference + next, write report
+        run: uv run ltw all
+      - name: eval regression gate
+        run: uv run ltw-eval --gate
+      - name: headline numbers must match the committed report
+        run: git diff --exit-code -- docs/latest-run.json || (echo "run output changed; commit docs/latest-run.json if intended" && exit 1)
